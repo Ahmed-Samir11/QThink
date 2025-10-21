@@ -4,3 +4,4 @@ pyyaml
 qiskit
 pydantic
 numpy
+gradio
