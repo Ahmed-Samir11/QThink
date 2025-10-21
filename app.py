@@ -126,7 +126,7 @@ with gr.Blocks(theme=gr.themes.Soft(), title="QThink Demo") as demo:
             with gr.Row():
                 quyaml_input = gr.Textbox(lines=15, label="QuYAML Input", placeholder="Enter your QuYAML circuit definition here...")
                 with gr.Column():
-                    qasm_output = gr.Code(label="Generated QASM 2.0", language="qasm")
+                    qasm_output = gr.Code(label="Generated QASM 2.0", language="python")
                     diagram_output = gr.Textbox(label="Text Circuit Diagram", interactive=False)
             
             parse_button = gr.Button("Parse QuYAML", variant="primary")
