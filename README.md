@@ -3,8 +3,8 @@ title: QThink Agentic POC
 emoji: ⚛️
 colorFrom: blue
 colorTo: indigo
-sdk: fastapi
-app_file: main.py
+sdk: docker
+app_port: 7860
 ---
 
 # QThink Agentic Proof-of-Concept API
