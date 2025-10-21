@@ -1,7 +1,7 @@
 import gradio as gr
 from fastapi import FastAPI, Body, HTTPException
 from pydantic import BaseModel, Field
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import time
 import numpy as np
 import random
@@ -120,7 +120,7 @@ def call_mock_dgm_self_improve(current_prompt: str, failure_analysis: str) -> st
     suggestion = random.choice(suggestions)
     return f"{current_prompt}\n\n{suggestion}\n# Justification: {failure_analysis}"
 
-def extract_final_vector_from_trace(agent_trace: list) -> np.ndarray | None:
+def extract_final_vector_from_trace(agent_trace: list) -> Optional[np.ndarray]:
     """Parses the final vector string from a mock agent trace."""
     try:
         # In our mock, the verifier's output contains the final vector preview
